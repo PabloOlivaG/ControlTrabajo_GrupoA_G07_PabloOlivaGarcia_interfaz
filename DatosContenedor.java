@@ -1,5 +1,5 @@
 package PaqG07;
-
+//Pablo Oliva García
 import javax.swing.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;

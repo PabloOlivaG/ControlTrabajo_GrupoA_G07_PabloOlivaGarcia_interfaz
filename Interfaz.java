@@ -1,5 +1,5 @@
 package PaqG07;
-
+//Pablo Oliva García
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -25,6 +25,7 @@ public class Interfaz extends JFrame {
     private JTextField IdContenedor2;
     private JTextField paisCoso;
     private JButton paisButton;
+    private JButton btGetPrior;
 
     private Integer id;
     private Integer peso;
@@ -111,6 +112,13 @@ public class Interfaz extends JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 DatosContenedor cositas = new DatosContenedor(puerto.toString(), 900, 630);
+            }
+        });
+        btGetPrior.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DatosContenedor cositas = new DatosContenedor(puerto.buscarPrioridad(Integer.parseInt(Prioridad.getModel().getSelectedItem().toString())), 900, 630);
+
             }
         });
 
